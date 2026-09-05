@@ -1,0 +1,100 @@
+{
+  "dataset_summary": {
+    "total_evaluated": 40,
+    "authentic_count": 20,
+    "tampered_count": 20,
+    "train_templates": [
+      "courier_bluedart_01",
+      "courier_delhivery_02",
+      "gst_invoice_apex_01",
+      "gst_invoice_techmart_02"
+    ],
+    "test_templates": [
+      "upi_gpay_01",
+      "upi_phonepe_02"
+    ]
+  },
+  "evaluation_matrix": {
+    "authentic_evidence_metrics": {
+      "total_authentic": 20,
+      "seamless_auto_cleared_accept": 20,
+      "seamless_clearance_rate_pct": 100.0,
+      "human_review_friction_abstain": 0,
+      "friction_rate_pct": 0.0,
+      "false_rejections_reject": 0,
+      "false_rejection_rate_pct": 0.0
+    },
+    "threat_model_b_visual_only_fraud": {
+      "description": "Sophisticated fraud: 100% correct ledger fields, but delivery POD / signature / stamp is visually altered.",
+      "total_samples": 16,
+      "hard_blocked_reject": 1,
+      "safely_deferred_abstain": 0,
+      "critical_silent_leakage_accept": 15,
+      "interception_rate_pct": 6.2,
+      "silent_leakage_rate_pct": 93.8
+    },
+    "threat_model_a_ledger_inconsistent_fraud": {
+      "description": "Ledger fraud: Amount or Order ID altered (caught by multi-layer cross-check).",
+      "total_samples": 4,
+      "hard_blocked_reject": 0,
+      "safely_deferred_abstain": 4,
+      "critical_silent_leakage_accept": 0,
+      "interception_rate_pct": 100.0,
+      "silent_leakage_rate_pct": 0.0
+    },
+    "combined_total_fraud_matrix": {
+      "total_tampered": 20,
+      "total_hard_blocked_reject": 1,
+      "total_safely_deferred_abstain": 4,
+      "total_critical_leakage_accept": 15,
+      "total_fraud_interception_rate_pct": 25.0,
+      "total_silent_leakage_rate_pct": 75.0
+    }
+  },
+  "financial_cost_optimization": {
+    "optimal_reject_threshold": 0.65,
+    "optimal_accept_threshold": 0.35,
+    "cost_loss_curve": [
+      {
+        "threshold_reject": 0.45,
+        "threshold_accept": 0.35,
+        "total_rupee_loss": 73640.0,
+        "false_rejections": 0,
+        "false_acceptances": 19,
+        "abstentions": 0
+      },
+      {
+        "threshold_reject": 0.55,
+        "threshold_accept": 0.35,
+        "total_rupee_loss": 73640.0,
+        "false_rejections": 0,
+        "false_acceptances": 19,
+        "abstentions": 0
+      },
+      {
+        "threshold_reject": 0.65,
+        "threshold_accept": 0.35,
+        "total_rupee_loss": 73640.0,
+        "false_rejections": 0,
+        "false_acceptances": 19,
+        "abstentions": 0
+      },
+      {
+        "threshold_reject": 0.75,
+        "threshold_accept": 0.35,
+        "total_rupee_loss": 73690.0,
+        "false_rejections": 0,
+        "false_acceptances": 19,
+        "abstentions": 1
+      },
+      {
+        "threshold_reject": 0.85,
+        "threshold_accept": 0.35,
+        "total_rupee_loss": 73690.0,
+        "false_rejections": 0,
+        "false_acceptances": 19,
+        "abstentions": 1
+      }
+    ]
+  }
+}

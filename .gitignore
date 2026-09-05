@@ -1,0 +1,55 @@
+# Environment & Secrets
+.env
+.env.local
+*.env
+
+# Archives & Backups
+*.zip
+*.tar*
+*.7z
+*.bak
+*.rar
+*.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Generated data caches (keep templates, ignore large bulk synthetic outputs if needed)
+data/synthetic/tampered/
+data/synthetic/masks/
+data/synthetic/authentic/
